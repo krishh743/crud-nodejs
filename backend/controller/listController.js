@@ -3,7 +3,6 @@ const List = require("../models/list");
 exports.createListItem = async (req, res) => {
     try {
         const {userId, name, email, phone } = req.body;
-        // const createdBy = req.User._id; 
         const newItem = new List({ name, email, phone,   createdBy: userId, });
         await newItem.save();
         res.status(201).json(newItem);

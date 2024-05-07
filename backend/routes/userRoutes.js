@@ -1,7 +1,6 @@
 const express = require('express');
 const userRouter = express.Router();
 const userController = require('../controller/userController');
-// const newsletterscontroller = require('../controllers/newslettersController');
 const verifyToken = require('../middleware/middleware');
 
 // Get all users
