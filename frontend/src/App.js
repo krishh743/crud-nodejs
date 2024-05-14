@@ -22,10 +22,9 @@ function App() {
   };
 
   const handleCreateUser = async (e) => {
-    e.preventDefault(); // Prevent form submission
+    e.preventDefault(); 
 
     try {
-      // Make an API call to create a user
       const response = await axios.post(
         "http://localhost:5000/api/createList",
         {
@@ -86,10 +85,7 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        // Make an API call to fetch user data
         const response = await axios.get("http://localhost:5000/api/getUsers");
-
-        // Update the state with the fetched user data
         setUser(response.data);
       } catch (error) {
         console.error(error);
