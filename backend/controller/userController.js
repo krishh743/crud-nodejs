@@ -12,7 +12,7 @@ const getAllUsers = async (req, res) => {
           .status(500)
           .json({ error: "An error occurred while fetching the userList." });
       }
-};
+}; 
 
 // Get a specific user by ID
 const getUserById = async (req, res) => {
